@@ -1,0 +1,26 @@
+{
+  "name": "postcss-url-mapper",
+  "version": "1.0.0",
+  "description": "Simple .map for urls in CSS",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/igoradamenko/postcss-url-mapper.git"
+  },
+  "keywords": [
+    "postcss",
+    "css",
+    "url",
+    "map"
+  ],
+  "author": {
+    "name": "Igor Adamenko",
+    "email": "mail@igoradamenko.com",
+    "url": "http://igoradamenko.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/igoradamenko/postcss-url-mapper/issues"
+  },
+  "homepage": "https://github.com/igoradamenko/postcss-url-mapper#readme"
+}
