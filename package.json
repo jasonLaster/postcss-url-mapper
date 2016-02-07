@@ -1,6 +1,6 @@
 {
   "name": "postcss-url-mapper",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "Simple .map for urls in CSS",
   "main": "index.js",
   "repository": {
@@ -22,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/igoradamenko/postcss-url-mapper/issues"
   },
-  "homepage": "https://github.com/igoradamenko/postcss-url-mapper#readme"
+  "homepage": "https://github.com/igoradamenko/postcss-url-mapper#readme",
+  "dependencies": {
+    "postcss": "^5.0.14"
+  }
 }
