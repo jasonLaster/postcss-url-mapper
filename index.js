@@ -1,8 +1,6 @@
 'use strict';
 
-var postcss = require('postcss');
-
-module.exports = postcss.plugin('postcss-url-mapper', function(map, options) {
+module.exports = require('postcss').plugin('postcss-url-mapper', function(map, options) {
 	return function(css) {
 		if (typeof map != 'function') {
 			return;
