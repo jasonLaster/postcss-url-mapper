@@ -1,4 +1,5 @@
-# [postcss][postcss]-url-mapper [![Build Status](https://travis-ci.org/igoradamenko/postcss-url-mapper.svg?branch=master)](https://travis-ci.org/igoradamenko/postcss-url-mapper)
+# [postcss][postcss]-url-mapper
+[![Build Status](https://travis-ci.org/igoradamenko/postcss-url-mapper.svg?branch=master)](https://travis-ci.org/igoradamenko/postcss-url-mapper)
 > Simple .map for urls in CSS
 
 <img align="right" width="95" height="95"
