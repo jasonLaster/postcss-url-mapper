@@ -17,15 +17,15 @@ npm install postcss-url-mapper --save
 ## Configuration
 
 ### Map
-Map function.
-Takes two arguments: `url` and `type`, where `type` is a name of property or at-rule (`background`, `cursor`, `import`, etc).
+Map function.  
+Takes two arguments: `url` and `type`, where `type` is a name of property or at-rule (`background`, `cursor`, `import`, etc).  
 *Required.*
 
 ### Options
 
 #### atRules
-Indicates whether the mapper should call map function for at-rules (like `@import`).
-Type: `boolean`
+Indicates whether the mapper should call map function for at-rules (like `@import`).  
+Type: `boolean`  
 Default: `false`
 
 ## Usage
