@@ -10,7 +10,7 @@ module.exports = require('postcss').plugin('postcss-url-mapper', function(map, o
 			atRules: false
 		};
 
-		var	declsRegex = /^(?=cue|play|background|content|src|cursor)/,
+		var	declsRegex = /^(?=cue|play|background|content|src|cursor|list-style)/,
 			urlRegex = /url\(\s*['"]?(?!['"]?data:)(.*?)['"]?\s*\)/g;
 
 		css.walkDecls(declsRegex, function(decl) {
