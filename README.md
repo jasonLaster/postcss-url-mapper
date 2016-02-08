@@ -55,7 +55,7 @@ function urlMapper(url, type) {
 }
 ```
 
-**Note:** `url` can't be a data URI.
+**Note:** Mapper doesn't match on data URI (`url` is always URL), but you can return it, for instance when you replace icons with their data. But I think there is better tools for such tasks.
 
 [postcss]: https://github.com/postcss/postcss
 [npm]: https://www.npmjs.com/package/postcss-url-mapper
