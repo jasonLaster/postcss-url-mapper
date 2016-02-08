@@ -1,6 +1,6 @@
 {
   "name": "postcss-url-mapper",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Simple .map for urls in CSS",
   "main": "index.js",
   "repository": {
