@@ -3,6 +3,9 @@
   "version": "0.2.0",
   "description": "Simple .map for urls in CSS",
   "main": "index.js",
+  "scripts": {
+    "test": "tape test.js | tap-spec"    
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/igoradamenko/postcss-url-mapper.git"
@@ -25,5 +28,9 @@
   "homepage": "https://github.com/igoradamenko/postcss-url-mapper#readme",
   "dependencies": {
     "postcss": "^5.0.14"
+  },
+  "devDependencies": {
+    "tap-spec": "^4.1.1",
+    "tape": "^4.4.0"
   }
 }
