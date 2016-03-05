@@ -10,20 +10,19 @@ module.exports = require('postcss').plugin('postcss-url-mapper', function(map, o
 			atRules: false
 		};
 
-		var	declsRegex = /^(?=cue|play|background|content|src|cursor|list-style)/,
-			urlRegex = /url\(\s*['"]?(?!['"]?data:)(.*?)['"]?\s*\)/g;
-
-		css.walkDecls(declsRegex, function(decl) {
-			decl.value = decl.value.replace(urlRegex, function(match, url) {
-				return 'url("' + map(url, decl.prop) + '")';
+		var replacer = function(value, name) {
+			return value.replace(/url\(\s*['"]?(?!['"]?data:)(.*?)['"]?\s*\)/g, function(match, url) {
+				return 'url("' + map(url, name) + '")';
 			});
+		};
+
+		css.walkDecls(/^(?=cue|play|background|content|src|cursor|list-style)/, function(decl) {
+			decl.value = replacer(decl.value, decl.prop);
 		});
 
 		if (options.atRules) {
 			css.walkAtRules('import', function(rule) {
-				rule.params = rule.params.replace(urlRegex, function(match, url) {
-					return 'url("' + map(url, rule.name) + '")';
-				});
+				rule.params = replacer(rule.params, rule.name);
 			});
 		}
 	};
