@@ -3,3 +3,7 @@
 .gitignore
 
 node_modules/
+
+test.js
+.eslintrc.json
+.travis.yml
