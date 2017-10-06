@@ -28,7 +28,7 @@
   },
   "homepage": "https://github.com/igoradamenko/postcss-url-mapper#readme",
   "dependencies": {
-    "postcss": "^5.0.14"
+    "postcss": "^6.0.0"
   },
   "devDependencies": {
     "eslint": "^3.0.0",
