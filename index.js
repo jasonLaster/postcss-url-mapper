@@ -20,6 +20,10 @@ module.exports = require('postcss').plugin('postcss-url-mapper', function(map, o
 			decl.value = replacer(decl.value, decl.prop);
 		});
 
+		css.walkDecls(/^(--)/, function(decl) {
+			decl.value = replacer(decl.value, decl.prop);
+		});
+
 		if (options.atRules) {
 			css.walkAtRules('import', function(rule) {
 				rule.params = replacer(rule.params, rule.name);
