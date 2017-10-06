@@ -1,7 +1,7 @@
 const test = require('tape');
 const postcss = require('postcss');
 const plugin = require('./');
-const { name } = require('./package.json');
+const name = require('./package.json').name; // eslint-disable-line prefer-destructuring
 
 const tests = [
   {
@@ -58,9 +58,7 @@ const urlMapper = (url, type) => `/app-${type}/${url}`;
 test(name, (t) => {
   t.plan(tests.length);
 
-  tests.forEach(({ actual, expected, message, options }) => {
-    t.equal(process(actual, urlMapper, options), expected, message);
-  });
+  tests.forEach(x => t.equal(process(x.actual, urlMapper, x.options), x.expected, x.message));
 });
 
 test('should use the postcss plugin api', (t) => {
