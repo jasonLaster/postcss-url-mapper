@@ -11,6 +11,14 @@
     "lint": "eslint postcss-url-mapper.js tests.js",
     "prepublishOnly": "npm run lint && npm run test && npm run build"
   },
+  "babel": {
+    "presets": [
+      "env"
+    ],
+    "plugins": [
+      "transform-object-rest-spread"
+    ]
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/igoradamenko/postcss-url-mapper.git"
@@ -32,7 +40,7 @@
     "postcss": "^6.0.13"
   },
   "devDependencies": {
-    "babel-cli": "^6.26.0",
+    "babel-cli": "^6.24.0",
     "babel-preset-env": "^1.6.0",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "eslint": "^4.8.0",
