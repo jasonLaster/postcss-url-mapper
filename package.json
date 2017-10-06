@@ -4,8 +4,12 @@
   "description": "Simple .map for urls in CSS",
   "main": "index.js",
   "scripts": {
-    "test": "tape test.js | tap-spec || true",
-    "lint": "eslint index.js || true"
+    "dev": "nodemon --exec 'npm run lint && npm run test' --watch postcss-url-mapper.js --watch tests.js",
+    "build": "babel postcss-url-mapper.js -o index.js",
+    "pretest": "npm run build",
+    "test": "tape tests.js | tap-spec",
+    "lint": "eslint postcss-url-mapper.js tests.js",
+    "prepublish": "npm run lint && npm run test && npm run build"
   },
   "repository": {
     "type": "git",
@@ -13,26 +17,32 @@
   },
   "keywords": [
     "postcss",
+    "plugin",
     "css",
     "url",
     "map"
   ],
-  "author": {
-    "name": "Igor Adamenko",
-    "email": "mail@igoradamenko.com",
-    "url": "http://igoradamenko.com"
-  },
+  "author": "Igor Adamenko <mail@igoradamenko.com> (http://igoradamenko.com)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/igoradamenko/postcss-url-mapper/issues"
   },
   "homepage": "https://github.com/igoradamenko/postcss-url-mapper#readme",
   "dependencies": {
-    "postcss": "^6.0.1"
+    "postcss": "^6.0.13"
   },
   "devDependencies": {
-    "eslint": "^3.0.0",
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "eslint": "^4.8.0",
+    "eslint-config-airbnb-base": "^12.0.2",
+    "eslint-plugin-import": "^2.7.0",
+    "nodemon": "^1.12.1",
     "tap-spec": "^4.1.1",
     "tape": "^4.4.0"
-  }
+  },
+  "files": [
+    "index.js"
+  ]
 }
