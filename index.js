@@ -23,7 +23,7 @@ module.exports = require("postcss").plugin("postcss-url-mapper", function(
     }
 
     css.walkDecls(
-      /^(?=cue|play|background|content|src|cursor|list-style)/,
+      /^(?=--|cue|play|background|content|src|cursor|list-style)/,
       function(decl) {
         decl.value = replacer(decl.value, decl.prop);
       }

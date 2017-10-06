@@ -11,6 +11,12 @@ var tests = [
     options: {}
   },
   {
+    message: "should match url with variable",
+    actual: 'li { --foo: url("image.jpg") }',
+    expected: 'li { --foo: url("/app/image.jpg") }',
+    options: {}
+  },
+  {
     message: "should match url with single quote marks",
     actual: "a { cursor: url('image.jpg') }",
     expected: 'a { cursor: url("/app/image.jpg") }',
