@@ -9,7 +9,7 @@
     "pretest": "npm run build",
     "test": "tape tests.js | tap-spec",
     "lint": "eslint postcss-url-mapper.js tests.js",
-    "prepublish": "npm run lint && npm run test && npm run build"
+    "prepublishOnly": "npm run lint && npm run test && npm run build"
   },
   "repository": {
     "type": "git",
