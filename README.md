@@ -36,7 +36,7 @@ Type: `boolean`
 Default: `false`
 
 ## Example
-Let's imagine that we need to add prefix `/fonts/` for all `src` urls, `/bg/` for value of CSS variable `--background` and `/images/` for urls in other properties. And we also need to replace `http` with `https` in `@import`:
+Let's imagine that we need to add prefix `/fonts/` for all `src` urls, `/bg/` for value of CSS variable `--background-image` and `/images/` for urls in other properties. And we also need to replace `http` with `https` in `@import`:
 
 ```js
 postcss([require('postcss-url-mapper')(urlMapper, { atRules: true })]);
@@ -47,7 +47,7 @@ function urlMapper(url, type) {
       return url.replace('/^http/', 'https');
     case 'src':
       return `/fonts/${url}`;
-    case '--background-url':
+    case '--background-image':
       return `/bg/${url}`;
     default:
       return `/images/${url}`;
